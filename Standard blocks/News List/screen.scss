@@ -1,0 +1,127 @@
+// Используются миксины из репозитария _mixins.scss и compass/css3
+
+@include "mixins";
+@include "compass/css3";
+
+.newsRows{	
+	
+	.row{
+		// Опционально размеры и цвет
+		border-bottom: 1px solid #e1e1e1;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		&:after{
+			content:"";
+			display: block;
+			clear: both;
+		}
+	}
+
+	.pic{
+		// Cтатичные свойства
+		float: left;
+
+		// Опционально размеры
+		@include imgWrapper(200px, 200px); // Мой миксин для кропа и центрирования изображения
+	}
+
+	img{
+		// Cтатичные свойства
+		display: block;
+	}
+
+	.text{
+		// Опционально
+		margin-left: 220px;
+	}
+
+	.title{
+		// Cтатичные свойства
+		display: block;
+		
+		// Опционально
+		margin-bottom: 16px;
+	}
+
+	.date{
+		// Cтатичные свойства
+		display: block;
+
+		margin-bottom: 16px;
+	}
+
+	p{
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+}
+
+/*Пагинация*/
+
+.pagination{
+	padding-left: 0;
+	.next, .prev{
+		a{
+			
+			display: block;
+			padding: 0;
+			position: relative;
+			
+			// Динамичные значения
+			width:46px;
+			height:46px;
+			background:red;
+			&:after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				@include rotate(45deg);				
+				margin: auto;
+				
+				// Динамичные значения
+				left: 17px;
+				width: 13px;
+				height: 13px;
+				border-bottom: 2px solid #fff;
+				border-left: 2px solid #fff;
+			}
+			&:hover{
+				// Динамичные значения
+				background:darken(red, 10%);
+			}
+		}
+	}
+	.next{
+		// Динамичные значения
+		margin-left: 10px;
+		a{
+			&:after{
+				@include rotate(225deg);
+				// Динамичные значения
+				left: 12px;
+			}
+		}
+	}
+	.prev{
+		// Динамичные значения
+		margin-right: 10px;
+	}
+	li{		
+		display: inline-block;
+		vertical-align: middle;
+
+		// Динамичные значения
+		height: 46px;
+		a{
+			display: block; 
+
+			// Динамичные значения
+			padding: 0 5px;
+			line-height: 46px;
+			
+		}
+	}
+}
