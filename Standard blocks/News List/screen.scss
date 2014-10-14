@@ -1,6 +1,6 @@
 // Используются миксины из репозитария Template/sass/additional/_mixins.scss и compass/css3
 
-@include "mixins";
+@include "../../Template/sass/additional/mixins";
 @include "compass/css3";
 
 .newsRows{	
@@ -13,7 +13,7 @@
 		&:after{
 			content:"";
 			display: block;
-			clear: both;
+			clear: both; 
 		}
 	}
 
