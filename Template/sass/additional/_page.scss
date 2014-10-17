@@ -1,4 +1,4 @@
-/*-------------------------------------------- header ------------------------------------------*/
+//*-------------------------------------------- header ------------------------------------------*/
 #header {
 	@extend %pageWidth;
 
@@ -14,7 +14,11 @@
 #menu {
 	@extend %pageWidth;
 }
-/*-------------------------------------------- footer ------------------------------------------*/
+
+.hPhone{
+	text-align: right;
+}
+//*-------------------------------------------- footer ------------------------------------------*/
 #footer {@extend %pageWidth;
 
 	position: absolute;
@@ -25,5 +29,25 @@
 	height: $fHeight;
 }
 #containerFooter {
-	height: $fHeight;
+}
+
+// -------------------------------------------- main 
+#pageHTML {@extend %pageWidth;
+
+	position: relative;
+
+	height: 100%;
+	height: auto!important;
+	min-height: 100%;
+}
+main {
+
+	position: relative;
+	z-index: 1;
+}
+
+
+#containerMain {
+	@extend %pageWidth;
+	padding-bottom: $fHeight + 30px;
 }

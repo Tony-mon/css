@@ -6,32 +6,12 @@
 @import "compass/reset";
 @import "additional/vars";
 @import "additional/mixins";
+@import "additional/colors";
 @import "compass/css3";
 @import "additional/resets";
 @import "additional/typical";
 @import "additional/page";
 
-/*--------------------------------------------- body -------------------------------------------*/
-#pageHTML {@extend %pageWidth;
-
-	position: relative;
-
-	height: 100%;
-	height: auto!important;
-	min-height: 100%;
-}
-main {
-
-	position: relative;
-	z-index: 1;
-
-	padding-bottom: 140px;
-}
-
-
-#containerMain {
-	@extend %pageWidth;
-}
 
 
 

@@ -1,17 +1,19 @@
+div, a, span{
+	vertical-align: top;
+}
+
 img {
 	border: 0;
 	outline: 0;
 }
 a {
-	text-decoration: underline;
+	text-decoration: none;
 
-	color: #92afc2;
+	color: inherit;
 	border: 0;
 	outline: 0;
 	&:hover {
 		text-decoration: none;
-
-		color: #222224;
 	}
 }
 html,
